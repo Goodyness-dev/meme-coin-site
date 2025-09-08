@@ -84,6 +84,11 @@ export default function Home() {
   }, []);
 
   return (
+    <>
+    <head>
+      <title> Timmy Turner</title>
+      <meta name="description" content="The hottest meme coin on the blockchain"/>
+    </head>
     <main className="main text-white min-h-screen font-sans relative overflow-hidden">
     
       <header className="bg-black/40 backdrop-blur-md border-b border-purple-900/40 top-0 z-50 fixed w-full">
@@ -193,5 +198,6 @@ export default function Home() {
         <p className="text-gray-400 mt-6">© 2025 Timmy Turner. All rights reserved.</p>
       </footer>
     </main>
+    </>
   );
 }
