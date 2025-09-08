@@ -7,24 +7,8 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  // Floating meme images
-  useEffect(() => {
-    const images = document.querySelectorAll<HTMLImageElement>(".meme-img");
-    images.forEach((img) => {
-      function floatImg(img: any) {
-        gsap.to(img, {
-          x: gsap.utils.random(-100, 100),
-          y: gsap.utils.random(-100, 100),
-          rotation: gsap.utils.random(-30, 30),
-          duration: gsap.utils.random(2, 5),
-          yoyo: true,
-          repeat: -1,
-          ease: "sine.inOut",
-        });
-      }
-      floatImg(img);
-    });
-  }, []);
+
+
 
   // Tokenomics cards scroll animation
   useEffect(() => {
