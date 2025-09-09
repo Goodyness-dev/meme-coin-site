@@ -183,7 +183,7 @@ useEffect(() => {
         preload="none"
         className="w-[400px] h-[400px]  object-contain"
       >
-        <source src="Tokenomics-Animation.mp4" type="video/mp4"/>
+        <source src="video.mp4" type="video/mp4"/>
         </video>
     </div>
          
