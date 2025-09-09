@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
+
 export default function Home() {
 
 
@@ -23,12 +24,12 @@ export default function Home() {
       scrollTrigger: {
         trigger: ".tokenomics-section",
         start: "top 80%",
-        toggleActions: "restart none none restart", // replay every time
+        toggleActions: "restart none none restart", 
       },
     });
   }, []);
 
-  // Roadmap items scroll animation
+ 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -85,10 +86,7 @@ export default function Home() {
 
   return (
     <>
-    <head>
-      <title> Timmy Turner</title>
-      <meta name="description" content="The hottest meme coin on the blockchain"/>
-    </head>
+
     <main className="main text-white min-h-screen font-sans relative overflow-hidden">
     
       <header className="bg-black/40 backdrop-blur-md border-b border-purple-900/40 top-0 z-50 fixed w-full">
@@ -141,21 +139,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tokenomics */}
+     
       <section className="tokenomics-section py-16 px-6 bg-black/30">
+
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-purple-400">Tokenomics</h2>
+          <h2 className="text-3xl font-bold mb-6 text-purple-400 text-neon">Tokenomics</h2>
+            <div className="relative flex justify-center items-center mb-16">
+      <video
+        src="/tokenomics-animation.mp4"
+        autoPlay
+        muted
+        playsInline
+        className="w-[400px] h-[400px]  object-cover"
+      />
+    </div>
+         
           <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
+              <h3 className="text-xl font-semibold mb-2">30% Liquidity</h3>
+              <p>We keep the market healthy and the memes flowing.</p>
+            </div>
+           
             <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
               <h3 className="text-xl font-semibold mb-2">50% Community</h3>
               <p>Half of the coin goes to the people. No whales allowed 🐳.</p>
             </div>
+         
             <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
-              <h3 className="text-xl font-semibold mb-2">30% Liquidity</h3>
-              <p>We keep the market healthy and the memes flowing.</p>
+              <h3 className="text-xl font-semibold mb-2">10% Team Admins</h3>
+              <p>Funds for the future.</p>
             </div>
-            <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
-              <h3 className="text-xl font-semibold mb-2">20% Development</h3>
+             <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
+              <h3 className="text-xl font-semibold mb-2">10% Game and tech</h3>
               <p>Funds for the future.</p>
             </div>
           </div>

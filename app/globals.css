@@ -100,3 +100,7 @@ body {
   );
   mix-blend-mode: overlay;
 }
+
+.recharts-surface {
+  filter: drop-shadow(0 0 10px #9b5de5) drop-shadow(0 0 20px #f15bb5);
+}
