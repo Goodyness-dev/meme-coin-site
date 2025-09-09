@@ -104,3 +104,7 @@ body {
 .recharts-surface {
   filter: drop-shadow(0 0 10px #9b5de5) drop-shadow(0 0 20px #f15bb5);
 }
+video {
+  mix-blend-mode: screen; /* or lighten, overlay */
+  opacity: 0.9; /* soften the black */
+}

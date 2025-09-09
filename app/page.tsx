@@ -157,7 +157,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
               <h3 className="text-xl font-semibold mb-2">30% Liquidity</h3>
-              <p>We keep the market healthy and the memes flowing.</p>
+              <p>Keeps trading smooth & stable 💧</p>
             </div>
            
             <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
@@ -167,11 +167,11 @@ export default function Home() {
          
             <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
               <h3 className="text-xl font-semibold mb-2">10% Team Admins</h3>
-              <p>Funds for the future.</p>
+              <p>Fuel for devs & mods — keeping the rocket alive 🚀</p>
             </div>
              <div className="bg-black/60 p-6 rounded-2xl shadow-xl token-card border border-purple-900/40">
               <h3 className="text-xl font-semibold mb-2">10% Game and tech</h3>
-              <p>Funds for the future.</p>
+              <p>Funds for meme games & future upgrades 🎮✨.</p>
             </div>
           </div>
         </div>
