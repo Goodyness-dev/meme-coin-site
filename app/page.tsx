@@ -181,7 +181,7 @@ useEffect(() => {
         muted
         playsInline
         preload="none"
-        className="w-[400px] h-[400px]  object-cover"
+        className="w-[400px] h-[400px]  object-contain"
       >
         <source src="Tokenomics-Animation.mp4" type="video/mp4"/>
         </video>
