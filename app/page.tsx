@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Twitter, Send } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useEffect , useRef} from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -84,6 +84,36 @@ export default function Home() {
       .to(root, { "--grad1": "#000000", "--grad2": "#000000" }); // red glow
   }, []);
 
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+useEffect(() => {
+  if (!videoRef.current) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+         
+          if (videoRef.current) {
+            videoRef.current.currentTime = 0;
+            videoRef.current.play();
+          }
+        } else {
+          
+          videoRef.current?.pause();
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(videoRef.current);
+
+  return () => {
+    if (videoRef.current) observer.unobserve(videoRef.current);
+  };
+}, []);
+
+
   return (
     <>
 
@@ -146,12 +176,15 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6 text-purple-400 text-neon">Tokenomics</h2>
             <div className="relative flex justify-center items-center mb-16">
       <video
-        src="/tokenomics-animation.mp4"
+      ref={videoRef}
         autoPlay
         muted
         playsInline
+        preload="none"
         className="w-[400px] h-[400px]  object-cover"
-      />
+      >
+        <source src="Tokenomics-Animation.mp4" type="video/mp4"/>
+        </video>
     </div>
          
           <div className="grid md:grid-cols-3 gap-6">
